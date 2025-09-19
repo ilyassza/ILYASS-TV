@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILYASS TV - Football Match Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/icon1.png" alt="ILYASS TV Logo" class="logo-img">
+                <h2>ILYASS TV</h2>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="active" data-section="home"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-ar">الرئيسية</span></li>
+                    <li data-section="download"><i class="fas fa-download"></i> <span class="lang-en">Download Apps</span><span class="lang-ar">تحميل التطبيقات</span></li>
+                    <li data-section="stats"><i class="fas fa-chart-bar"></i> <span class="lang-en">Statistics</span><span class="lang-ar">الإحصائيات</span></li>
+                    <li data-section="info"><i class="fas fa-info-circle"></i> <span class="lang-en">Information</span><span class="lang-ar">معلومات</span></li>
+                    <li data-section="contact"><i class="fas fa-envelope"></i> <span class="lang-en">Contact Us</span><span class="lang-ar">اتصل بنا</span></li>
+                </ul>
+            </div>
+            <div class="nav-settings">
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="language-toggle">
+                    <button id="lang-en-btn" class="active">English</button>
+                    <button id="lang-ar-btn">العربية</button>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Sidebar (hidden by default) -->
+    <div class="mobile-sidebar">
+        <div class="mobile-menu">
+            <ul>
+                <li class="active" data-section="home"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-ar">الرئيسية</span></li>
+                <li data-section="download"><i class="fas fa-download"></i> <span class="lang-en">Download Apps</span><span class="lang-ar">تحميل التطبيقات</span></li>
+                <li data-section="stats"><i class="fas fa-chart-bar"></i> <span class="lang-en">Statistics</span><span class="lang-ar">الإحصائيات</span></li>
+                <li data-section="info"><i class="fas fa-info-circle"></i> <span class="lang-en">Information</span><span class="lang-ar">معلومات</span></li>
+                <li data-section="contact"><i class="fas fa-envelope"></i> <span class="lang-en">Contact Us</span><span class="lang-ar">اتصل بنا</span></li>
+            </ul>
+            <div class="mobile-settings">
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="mobile-theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="language-toggle">
+                    <button id="mobile-lang-en-btn" class="active">English</button>
+                    <button id="mobile-lang-ar-btn">العربية</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Home Section -->
+            <div class="section active" id="home">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1><span class="lang-en">Welcome to ILYASS TV</span><span class="lang-ar">مرحبًا بك في إلياس تي في</span></h1>
+                        <p class="lang-en">Your ultimate platform for football matches and streaming</p>
+                        <p class="lang-ar">منصتك المثالية لمباريات كرة القدم والبث</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="primary-btn" data-section-link="download">
+                                <i class="fas fa-download"></i> 
+                                <span class="lang-en">Download Now</span>
+                                <span class="lang-ar">تحميل الآن</span>
+                            </a>
+                            <a href="#" class="secondary-btn" data-section-link="info">
+                                <i class="fas fa-info-circle"></i> 
+                                <span class="lang-en">Learn More</span>
+                                <span class="lang-ar">معرفة المزيد</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/icon3.png" alt="ILYASS TV App" class="hero-img">
+                    </div>
+                </div>
+                
+                <div class="features-section">
+                    <h2><span class="lang-en">Why Choose ILYASS TV?</span><span class="lang-ar">لماذا تختار إلياس تي في؟</span></h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <h3><span class="lang-en">Live Matches</span><span class="lang-ar">مباريات مباشرة</span></h3>
+                            <p class="lang-en">Watch all football matches live in HD quality</p>
+                            <p class="lang-ar">شاهد جميع مباريات كرة القدم مباشرة بجودة عالية</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3><span class="lang-en">Replays</span><span class="lang-ar">الإعادة</span></h3>
+                            <p class="lang-en">Missed a match? Watch replays anytime</p>
+                            <p class="lang-ar">فاتتك مباراة؟ شاهد الإعادة في أي وقت</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3><span class="lang-en">All Leagues</span><span class="lang-ar">جميع الدوريات</span></h3>
+                            <p class="lang-en">Access to all major football leagues worldwide</p>
+                            <p class="lang-ar">الوصول إلى جميع دوريات كرة القدم الرئيسية في جميع أنحاء العالم</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3><span class="lang-en">Multi-Device</span><span class="lang-ar">متعدد الأجهزة</span></h3>
+                            <p class="lang-en">Watch on your phone, tablet, or TV</p>
+                            <p class="lang-ar">شاهد على هاتفك أو جهازك اللوحي أو التلفزيون</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quick-download">
+                    <h2><span class="lang-en">Get Started Now</span><span class="lang-ar">ابدأ الآن</span></h2>
+                    <div class="app-quick-cards">
+                        <div class="app-quick-card">
+                            <div class="app-quick-icon">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <h3><span class="lang-en">ILYASS TV</span><span class="lang-ar">إلياس تي في</span></h3>
+                            <a href="#" class="download-btn" id="quick-tv-app-download">
+                                <i class="fas fa-download"></i> 
+                                <span class="lang-en">Download</span>
+                                <span class="lang-ar">تحميل</span>
+                            </a>
+                        </div>
+                        <div class="app-quick-card">
+                            <div class="app-quick-icon">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <h3><span class="lang-en">ILYASS Player</span><span class="lang-ar">مشغل إلياس</span></h3>
+                            <a href="#" class="download-btn" id="quick-player-app-download">
+                                <i class="fas fa-download"></i> 
+                                <span class="lang-en">Download</span>
+                                <span class="lang-ar">تحميل</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="section" id="download">
+                <div class="section-header">
+                    <h2><span class="lang-en">Download Our Apps</span><span class="lang-ar">تحميل تطبيقاتنا</span></h2>
+                    <p class="lang-en">Get our applications and enjoy watching football matches anytime, anywhere</p>
+                    <p class="lang-ar">احصل على تطبيقاتنا واستمتع بمشاهدة مباريات كرة القدم في أي وقت وأي مكان</p>
+                </div>
+                
+                <div class="app-cards">
+                    <!-- TV App Card -->
+                    <div class="app-card">
+                        <div class="app-banner">
+                            <img src="https://via.placeholder.com/600x300?text=ILYASS+TV" alt="ILYASS TV" class="app-banner-img">
+                        </div>
+                        <div class="app-content">
+                            <div class="app-icon">
+                                <img src="assets/icon1.png" alt="ILYASS TV Icon" class="app-icon-img">
+                            </div>
+                            <div class="app-details">
+                                <h3><span class="lang-en">ILYASS TV</span><span class="lang-ar">إلياس تي في</span></h3>
+                                <p class="lang-en">Watch football matches live and on-demand with our premium streaming service</p>
+                                <p class="lang-ar">شاهد مباريات كرة القدم مباشرة وحسب الطلب مع خدمة البث المميزة</p>
+                                <div class="app-features">
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> <span class="lang-en">Live Matches</span><span class="lang-ar">مباريات مباشرة</span></span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> <span class="lang-en">HD Quality</span><span class="lang-ar">جودة عالية</span></span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> <span class="lang-en">All Leagues</span><span class="lang-ar">جميع الدوريات</span></span>
+                                </div>
+                                <div class="app-version">
+                                    <span class="lang-en">Version:</span><span class="lang-ar">الإصدار:</span> <span id="tv-app-version">1.0.0</span>
+                                </div>
+                                <div class="app-actions">
+                                    <a href="#" class="download-btn" id="tv-app-download">
+                                        <i class="fas fa-download"></i> 
+                                        <span class="lang-en">Download Now</span>
+                                        <span class="lang-ar">تحميل الآن</span>
+                                    </a>
+                                    <a href="#" class="info-btn" data-section-link="info">
+                                        <i class="fas fa-info-circle"></i> 
+                                        <span class="lang-en">More Info</span>
+                                        <span class="lang-ar">المزيد من المعلومات</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player App Card -->
+                    <div class="app-card">
+                        <div class="app-banner">
+                            <img src="https://via.placeholder.com/600x300?text=ILYASS+Player" alt="ILYASS Player" class="app-banner-img">
+                        </div>
+                        <div class="app-content">
+                            <div class="app-icon">
+                                <img src="assets/icon2.png" alt="ILYASS Player Icon" class="app-icon-img">
+                            </div>
+                            <div class="app-details">
+                                <h3><span class="lang-en">ILYASS Player</span><span class="lang-ar">مشغل إلياس</span></h3>
+                                <p class="lang-en">Advanced media player designed specifically for ILYASS TV streams with enhanced features</p>
+                                <p class="lang-ar">مشغل وسائط متقدم مصمم خصيصًا لبث إلياس تي في مع ميزات محسنة</p>
+                                <div class="app-features">
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> <span class="lang-en">Advanced Controls</span><span class="lang-ar">تحكم متقدم</span></span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> <span class="lang-en">Multiple Quality</span><span class="lang-ar">جودات متعددة</span></span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> <span class="lang-en">Screenshot</span><span class="lang-ar">لقطة شاشة</span></span>
+                                </div>
+                                <div class="app-version">
+                                    <span class="lang-en">Version:</span><span class="lang-ar">الإصدار:</span> <span id="player-app-version">1.0.0</span>
+                                </div>
+                                <div class="app-actions">
+                                    <a href="#" class="download-btn" id="player-app-download">
+                                        <i class="fas fa-download"></i> 
+                                        <span class="lang-en">Download Now</span>
+                                        <span class="lang-ar">تحميل الآن</span>
+                                    </a>
+                                    <a href="#" class="info-btn" data-section-link="info">
+                                        <i class="fas fa-info-circle"></i> 
+                                        <span class="lang-en">More Info</span>
+                                        <span class="lang-ar">المزيد من المعلومات</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-guide">
+                    <h3><span class="lang-en">How to Install</span><span class="lang-ar">كيفية التثبيت</span></h3>
+                    <div class="guide-steps">
+                        <div class="guide-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4><span class="lang-en">Download</span><span class="lang-ar">تحميل</span></h4>
+                                <p class="lang-en">Click the download button and save the APK file</p>
+                                <p class="lang-ar">انقر على زر التحميل واحفظ ملف APK</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4><span class="lang-en">Security</span><span class="lang-ar">الأمان</span></h4>
+                                <p class="lang-en">Allow installation from unknown sources in settings</p>
+                                <p class="lang-ar">السماح بالتثبيت من مصادر غير معروفة في الإعدادات</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4><span class="lang-en">Install</span><span class="lang-ar">تثبيت</span></h4>
+                                <p class="lang-en">Open the APK file and follow installation instructions</p>
+                                <p class="lang-ar">افتح ملف APK واتبع تعليمات التثبيت</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4><span class="lang-en">Enjoy</span><span class="lang-ar">استمتع</span></h4>
+                                <p class="lang-en">Open the app and start watching your favorite matches</p>
+                                <p class="lang-ar">افتح التطبيق وابدأ في مشاهدة مبارياتك المفضلة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="section" id="stats">
+                <h2><span class="lang-en">App Statistics</span><span class="lang-ar">إحصائيات التطبيق</span></h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="tv-downloads">10,000+</h3>
+                            <p><span class="lang-en">ILYASS TV Downloads</span><span class="lang-ar">تنزيلات إلياس تي في</span></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="player-downloads">5,000+</h3>
+                            <p><span class="lang-en">ILYASS Player Downloads</span><span class="lang-ar">تنزيلات مشغل إلياس</span></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="active-users">7,500+</h3>
+                            <p><span class="lang-en">Active Users</span><span class="lang-ar">المستخدمين النشطين</span></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="matches-streamed">1,200+</h3>
+                            <p><span class="lang-en">Matches Streamed</span><span class="lang-ar">المباريات المبثوثة</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Information Section -->
+            <div class="section" id="info">
+                <h2><span class="lang-en">App Information</span><span class="lang-ar">معلومات التطبيق</span></h2>
+                <div class="info-container">
+                    <div class="info-card">
+                        <h3><span class="lang-en">ILYASS TV</span><span class="lang-ar">إلياس تي في</span></h3>
+                        <div class="info-content">
+                            <img src="assets/icon4.png" alt="ILYASS TV Screenshot" class="app-screenshot">
+                            <div class="info-text">
+                                <p class="lang-en">ILYASS TV is your go-to application for watching football matches live and on-demand. With a user-friendly interface, you can easily browse through different leagues, teams, and tournaments to find the matches you want to watch.</p>
+                                <p class="lang-ar">إلياس تي في هو تطبيقك المفضل لمشاهدة مباريات كرة القدم مباشرة وحسب الطلب. مع واجهة سهلة الاستخدام، يمكنك تصفح الدوريات والفرق والبطولات المختلفة بسهولة للعثور على المباريات التي تريد مشاهدتها.</p>
+                                <h4><span class="lang-en">Key Features:</span><span class="lang-ar">الميزات الرئيسية:</span></h4>
+                                <ul>
+                                    <li><span class="lang-en">Live streaming of football matches</span><span class="lang-ar">بث مباشر لمباريات كرة القدم</span></li>
+                                    <li><span class="lang-en">On-demand replay of previous matches</span><span class="lang-ar">إعادة تشغيل المباريات السابقة حسب الطلب</span></li>
+                                    <li><span class="lang-en">Match schedules and notifications</span><span class="lang-ar">جداول المباريات والإشعارات</span></li>
+                                    <li><span class="lang-en">Multiple leagues and tournaments</span><span class="lang-ar">دوريات وبطولات متعددة</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3><span class="lang-en">ILYASS Player</span><span class="lang-ar">مشغل إلياس</span></h3>
+                        <div class="info-content">
+                            <div class="info-text">
+                                <p class="lang-en">ILYASS Player is a companion app designed to enhance your viewing experience. It provides advanced playback features for matches from ILYASS TV, including quality control, playback speed, and more.</p>
+                                <p class="lang-ar">مشغل إلياس هو تطبيق مصاحب مصمم لتحسين تجربة المشاهدة. يوفر ميزات تشغيل متقدمة للمباريات من إلياس تي في، بما في ذلك التحكم في الجودة وسرعة التشغيل والمزيد.</p>
+                                <h4><span class="lang-en">Key Features:</span><span class="lang-ar">الميزات الرئيسية:</span></h4>
+                                <ul>
+                                    <li><span class="lang-en">Advanced video controls</span><span class="lang-ar">عناصر تحكم فيديو متقدمة</span></li>
+                                    <li><span class="lang-en">Multiple quality options</span><span class="lang-ar">خيارات جودة متعددة</span></li>
+                                    <li><span class="lang-en">Playback speed adjustment</span><span class="lang-ar">ضبط سرعة التشغيل</span></li>
+                                    <li><span class="lang-en">Screenshot capability</span><span class="lang-ar">إمكانية أخذ لقطات شاشة</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="section" id="contact">
+                <h2><span class="lang-en">Contact Us</span><span class="lang-ar">اتصل بنا</span></h2>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <label for="name"><span class="lang-en">Name</span><span class="lang-ar">الاسم</span></label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><span class="lang-en">Email</span><span class="lang-ar">البريد الإلكتروني</span></label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><span class="lang-en">Subject</span><span class="lang-ar">الموضوع</span></label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><span class="lang-en">Message</span><span class="lang-ar">الرسالة</span></label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="lang-en">Send Message</span>
+                            <span class="lang-ar">إرسال الرسالة</span>
+                        </button>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>contact@ilyasstv.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 234 567 890</p>
+                        </div>
+                        <div class="social-media">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Dashboard (Hidden by default) -->
+            <div class="section" id="admin">
+                <h2><span class="lang-en">Admin Dashboard</span><span class="lang-ar">لوحة الإدارة</span></h2>
+                <div class="admin-login" id="admin-login">
+                    <h3><span class="lang-en">Admin Login</span><span class="lang-ar">تسجيل دخول المسؤول</span></h3>
+                    <div class="form-group">
+                        <label for="admin-username"><span class="lang-en">Username</span><span class="lang-ar">اسم المستخدم</span></label>
+                        <input type="text" id="admin-username" name="admin-username">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password"><span class="lang-en">Password</span><span class="lang-ar">كلمة المرور</span></label>
+                        <input type="password" id="admin-password" name="admin-password">
+                    </div>
+                    <button type="button" id="admin-login-btn" class="submit-btn">
+                        <span class="lang-en">Login</span>
+                        <span class="lang-ar">تسجيل الدخول</span>
+                    </button>
+                </div>
+                <div class="admin-panel" id="admin-panel" style="display: none;">
+                    <div class="admin-section">
+                        <h3><span class="lang-en">Update ILYASS TV App</span><span class="lang-ar">تحديث تطبيق إلياس تي في</span></h3>
+                        <div class="form-group">
+                            <label for="tv-version"><span class="lang-en">Version</span><span class="lang-ar">الإصدار</span></label>
+                            <input type="text" id="tv-version" name="tv-version" value="1.0.0">
+                        </div>
+                        <div class="form-group">
+                            <label for="tv-download-link"><span class="lang-en">Download Link</span><span class="lang-ar">رابط التحميل</span></label>
+                            <input type="text" id="tv-download-link" name="tv-download-link" value="#">
+                        </div>
+                        <button type="button" id="update-tv-btn" class="submit-btn">
+                            <span class="lang-en">Update</span>
+                            <span class="lang-ar">تحديث</span>
+                        </button>
+                    </div>
+                    <div class="admin-section">
+                        <h3><span class="lang-en">Update ILYASS Player App</span><span class="lang-ar">تحديث تطبيق مشغل إلياس</span></h3>
+                        <div class="form-group">
+                            <label for="player-version"><span class="lang-en">Version</span><span class="lang-ar">الإصدار</span></label>
+                            <input type="text" id="player-version" name="player-version" value="1.0.0">
+                        </div>
+                        <div class="form-group">
+                            <label for="player-download-link"><span class="lang-en">Download Link</span><span class="lang-ar">رابط التحميل</span></label>
+                            <input type="text" id="player-download-link" name="player-download-link" value="#">
+                        </div>
+                        <button type="button" id="update-player-btn" class="submit-btn">
+                            <span class="lang-en">Update</span>
+                            <span class="lang-ar">تحديث</span>
+                        </button>
+                    </div>
+                    <div class="admin-section">
+                        <h3><span class="lang-en">Update Statistics</span><span class="lang-ar">تحديث الإحصائيات</span></h3>
+                        <div class="form-group">
+                            <label for="stat-tv-downloads"><span class="lang-en">TV App Downloads</span><span class="lang-ar">تنزيلات تطبيق التلفزيون</span></label>
+                            <input type="text" id="stat-tv-downloads" name="stat-tv-downloads" value="10,000+">
+                        </div>
+                        <div class="form-group">
+                            <label for="stat-player-downloads"><span class="lang-en">Player App Downloads</span><span class="lang-ar">تنزيلات تطبيق المشغل</span></label>
+                            <input type="text" id="stat-player-downloads" name="stat-player-downloads" value="5,000+">
+                        </div>
+                        <div class="form-group">
+                            <label for="stat-active-users"><span class="lang-en">Active Users</span><span class="lang-ar">المستخدمين النشطين</span></label>
+                            <input type="text" id="stat-active-users" name="stat-active-users" value="7,500+">
+                        </div>
+                        <div class="form-group">
+                            <label for="stat-matches-streamed"><span class="lang-en">Matches Streamed</span><span class="lang-ar">المباريات المبثوثة</span></label>
+                            <input type="text" id="stat-matches-streamed" name="stat-matches-streamed" value="1,200+">
+                        </div>
+                        <button type="button" id="update-stats-btn" class="submit-btn">
+                            <span class="lang-en">Update</span>
+                            <span class="lang-ar">تحديث</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Button (Fixed at bottom right) -->
+    <div class="admin-button" id="admin-button">
+        <i class="fas fa-cog"></i>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/40x40?text=ILYASS" alt="ILYASS TV Logo" class="logo-img">
+                        <h3>ILYASS TV</h3>
+                    </div>
+                    <p class="lang-en">Your ultimate platform for football matches and streaming. Watch live games, replays, and highlights anytime, anywhere.</p>
+                    <p class="lang-ar">منصتك المثالية لمباريات كرة القدم والبث. شاهد المباريات المباشرة والإعادة والأهداف في أي وقت وأي مكان.</p>
+                </div>
+                <div class="footer-col">
+                    <h4><span class="lang-en">Quick Links</span><span class="lang-ar">روابط سريعة</span></h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-section-link="home"><span class="lang-en">Home</span><span class="lang-ar">الرئيسية</span></a></li>
+                        <li><a href="#" data-section-link="download"><span class="lang-en">Download Apps</span><span class="lang-ar">تحميل التطبيقات</span></a></li>
+                        <li><a href="#" data-section-link="stats"><span class="lang-en">Statistics</span><span class="lang-ar">الإحصائيات</span></a></li>
+                        <li><a href="#" data-section-link="info"><span class="lang-en">Information</span><span class="lang-ar">معلومات</span></a></li>
+                        <li><a href="#" data-section-link="contact"><span class="lang-en">Contact Us</span><span class="lang-ar">اتصل بنا</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><span class="lang-en">Our Apps</span><span class="lang-ar">تطبيقاتنا</span></h4>
+                    <ul class="footer-links">
+                        <li><a href="#" id="footer-tv-download"><span class="lang-en">ILYASS TV</span><span class="lang-ar">إلياس تي في</span></a></li>
+                        <li><a href="#" id="footer-player-download"><span class="lang-en">ILYASS Player</span><span class="lang-ar">مشغل إلياس</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><span class="lang-en">Connect With Us</span><span class="lang-ar">تواصل معنا</span></h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ilyasstv.com</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> ILYASS TV. <span class="lang-en">All Rights Reserved</span><span class="lang-ar">جميع الحقوق محفوظة</span></p>
+                <div class="footer-bottom-links">
+                    <a href="#"><span class="lang-en">Privacy Policy</span><span class="lang-ar">سياسة الخصوصية</span></a>
+                    <a href="#"><span class="lang-en">Terms of Service</span><span class="lang-ar">شروط الخدمة</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
