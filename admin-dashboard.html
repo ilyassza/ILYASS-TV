@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - ILYASS TV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/admin-dashboard.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>لوحة التحكم</h1>
+            <div class="header-actions">
+                <button id="addAppBtn" class="btn btn-primary">إضافة تطبيق جديد</button>
+                <button id="logoutBtn" class="btn btn-danger">تسجيل الخروج</button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <div id="appsList" class="apps-grid"></div>
+        </main>
+
+        <!-- Modal for adding/editing apps -->
+        <div id="appModal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">إضافة تطبيق جديد</h2>
+                <form id="appForm">
+                    <div class="form-group">
+                        <label for="appName">اسم التطبيق</label>
+                        <input type="text" id="appName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appDescription">وصف التطبيق</label>
+                        <textarea id="appDescription" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appIcon">أيقونة التطبيق</label>
+                        <input type="file" id="appIcon" accept="image/*">
+                        <img id="iconPreview" class="preview-image" style="display: none;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appScreenshots">صور التطبيق</label>
+                        <input type="file" id="appScreenshots" accept="image/*" multiple>
+                        <div id="screenshotsPreview" class="preview-images"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appFile">ملف التطبيق (APK)</label>
+                        <input type="file" id="appFile" accept=".apk">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appRating">التقييم</label>
+                        <select id="appRating">
+                            <option value="5">5 نجوم</option>
+                            <option value="4">4 نجوم</option>
+                            <option value="3">3 نجوم</option>
+                            <option value="2">2 نجوم</option>
+                            <option value="1">1 نجمة</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">حفظ</button>
+                        <button type="button" class="btn btn-secondary" onclick="closeModal()">إلغاء</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+</body>
+</html>
